@@ -68,3 +68,62 @@ print(a@a)
 print("matrix transpose")
 print(a.T)
 
+print("\n matrix multiplication")
+print(a@a)
+print("\n matrix multiplication one array dot other")
+print(a.dot(a))
+
+print("\n matrix multiplication pass two arrays in np.dot")
+print(np.dot(a,a))
+
+a=np.array([[1,2,3],[1,1,1],[9,8,5]])
+
+print("\n find min of an axis with array.min")
+print(a)
+print(a.min(axis=0))
+print(a.min(axis=1))
+
+a=np.array([[1,2,3],[4,5,6],[7,8,9]])
+b=np.ones(3,3)
+print("access elements in the matrix")
+print(a[0,0])
+print(a[1,0])
+print(a[1,2])
+
+print(a[:,1])
+print(a[1,:])
+
+print(a<5)
+
+
+print("a.shape: ")
+print(a.shape)
+print("b.shape: ")
+print(b.shape)
+
+print("\n vstack arrays of same shape")
+print(np.vstack((a,b)))
+print("ab.shape: ")
+print(np.vstack((a,b)).shape)
+
+
+print("\n hstack arrays of same shape")
+print(np.hstack((a,b)))
+print("ab.shape: ")
+print(np.hstack((a,b)).shape)
+
+print("\n reference same array")
+a=b
+b[1,1]=20
+print(a)
+b[1,1]=1
+print("\n copy an array rather than just referencing the same array")
+a=b.copy();
+b[1,1]=50
+print(a)
+
+
+print("ab.shape: ")
+print(np.vstack((a,b)).shape)
+
+
